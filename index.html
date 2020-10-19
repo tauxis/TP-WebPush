@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script src="js/util.js"></script>
+    <title>Title</title>
+    <script type="text/javascript" src="public/js/util.js"></script>
     <script>
         function main() {
-            if(checkBrowser())
-                return true;
+            if (!checkBrowser())
+                return;
+            let sw_registration = registerServiceWorker();
+            console.log(sw_registration);
         }
+
+
     </script>
+</head>
+<body onload="main();">
+Bonjour
 </body>
 </html>
